@@ -12,19 +12,19 @@ The provided `setup.sh` script pulls the cloudmapper repo into the current direc
 
 ```
 docker run -p 8000:8000 -v `pwd`/cloudmapper:/opt/cloudmapper -it cloudmapper configure add-account --name mycorp --id 123456789012 --default true
-docker run -p 8000:8000 -v `pwd`/cloudmapper:/opt/cloudmapper -it cloudmapper configure add-cidr --name dev --cidr 1.2.3.4/20'
-docker run -p 8000:8000 -v `pwd`/cloudmapper:/opt/cloudmapper -it cloudmapper configure add-cidr --name prod --cidr 2.3.4.5/20'
+docker run -p 8000:8000 -v `pwd`/cloudmapper:/opt/cloudmapper -it cloudmapper configure add-cidr --name dev --cidr 1.2.3.4/20
+docker run -p 8000:8000 -v `pwd`/cloudmapper:/opt/cloudmapper -it cloudmapper configure add-cidr --name prod --cidr 2.3.4.5/20
 ```
 
 ### Collect Account Data
 
 ```
-docker run -p 8000:8000 -v `pwd`/cloudmapper:/opt/cloudmapper -it cloudmapper collect --account mycorp'
+docker run -p 8000:8000 -v `pwd`/cloudmapper:/opt/cloudmapper -it cloudmapper collect --account mycorp
 ```
 
 ### Run Webserver
 
 ```
-docker run -p 8000:8000 -v `pwd`/cloudmapper:/opt/cloudmapper -it cloudmapper prepare --account mycorp'
-docker run -p 8000:8000 -v `pwd`/cloudmapper:/opt/cloudmapper -it cloudmapper webserver --public'
+docker run -p 8000:8000 -v `pwd`/cloudmapper:/opt/cloudmapper -it cloudmapper prepare --account mycorp
+docker run -p 8000:8000 -v `pwd`/cloudmapper:/opt/cloudmapper -it cloudmapper webserver --public
 ```
